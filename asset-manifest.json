@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/lift/static/css/main.bda05d05.css",
-    "main.js": "/lift/static/js/main.1eb08353.js",
+    "main.css": "/lift/static/css/main.72be8693.css",
+    "main.js": "/lift/static/js/main.ca888ae8.js",
     "static/js/787.9b478b06.chunk.js": "/lift/static/js/787.9b478b06.chunk.js",
     "index.html": "/lift/index.html",
-    "main.bda05d05.css.map": "/lift/static/css/main.bda05d05.css.map",
-    "main.1eb08353.js.map": "/lift/static/js/main.1eb08353.js.map",
+    "main.72be8693.css.map": "/lift/static/css/main.72be8693.css.map",
+    "main.ca888ae8.js.map": "/lift/static/js/main.ca888ae8.js.map",
     "787.9b478b06.chunk.js.map": "/lift/static/js/787.9b478b06.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bda05d05.css",
-    "static/js/main.1eb08353.js"
+    "static/css/main.72be8693.css",
+    "static/js/main.ca888ae8.js"
   ]
 }
