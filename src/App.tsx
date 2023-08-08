@@ -1,10 +1,11 @@
-import { useRef, useState, memo, useMemo } from 'react';
+import { useRef, useState, memo } from 'react';
 import delay from 'delay';
 import Queue from 'p-queue';
 import { theLift, OnChangeProp } from './algoritm';
 import './App.css';
 
 const passengers = [[], [6, 5, 2], [4], [], [0,0,0], [], [], [3,6,4,5,6], [], [1,10,2], [1,4,3,2]];
+const max = 3;
 
 const Floors = memo(({ passengers, active, title }: { passengers: number[][], active?: number, title: string }) => {
   return (
@@ -47,7 +48,7 @@ function App() {
   const runFirstTest = () => {
     theLift(
       structuredClone(passengers),
-      3,
+      max,
       onChange,
     );
   };
@@ -55,7 +56,15 @@ function App() {
   return (
     <div className="App">
       {!state && <button onClick={runFirstTest}>run test</button>}
-      {!!state && <Lift passengers={passengers} activePassengers={state.activePassengers} currentFloor={state.currentFloor} deliveredPassengers={state.deliveredPassengers} waitingPassengers={state.waitingPassengers} />}
+      {!!state && (
+        <div className="content">
+          <Lift passengers={passengers} activePassengers={state.activePassengers} currentFloor={state.currentFloor} deliveredPassengers={state.deliveredPassengers} waitingPassengers={state.waitingPassengers} />
+          <div className="config">
+            <div>capacity: {max}</div>
+            <div>history: {state.floorHistory.join(',')}</div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
