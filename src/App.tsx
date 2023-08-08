@@ -54,7 +54,7 @@ function App() {
   
   return (
     <div className="App">
-      <button onClick={runFirstTest}>run test</button>
+      {!state && <button onClick={runFirstTest}>run test</button>}
       {!!state && <Lift passengers={passengers} activePassengers={state.activePassengers} currentFloor={state.currentFloor} deliveredPassengers={state.deliveredPassengers} waitingPassengers={state.waitingPassengers} />}
     </div>
   );
